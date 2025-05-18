@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+
+  --card: 0 0% 3%;
+  --card-foreground: 0 0% 100%;
+
+  --popover: 0 0% 3%;
+  --popover-foreground: 0 0% 100%;
+
+  --primary: 160 100% 50%;
+  --primary-foreground: 0 0% 0%;
+
+  --secondary: 270 100% 56%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 70%;
+
+  --accent: 270 100% 56%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 160 100% 50%;
+
+  --radius: 0.5rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffaa;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc88;
+}
+
+/* Hide default cursor when custom cursor is active */
+@media (min-width: 768px) {
+  * {
+    cursor: none !important;
+  }
+}
